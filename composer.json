@@ -1,0 +1,31 @@
+{
+    "name": "ivampiresp/laravel-rpc-server",
+    "type": "package",
+    "version": "dev-main",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ivampiresp\\LaravelRpcServer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Twilight",
+            "email": "im@ivampiresp.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "*",
+        "illuminate/console": "*",
+        "sajya/server": "*",
+        "ext-swoole": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ivampiresp\\LaravelRpcServer\\RpcServerServiceProvider"
+            ]
+        }
+    }
+}

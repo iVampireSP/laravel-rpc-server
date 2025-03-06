@@ -1,0 +1,21 @@
+<?php
+
+use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Configuration\Exceptions;
+use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Support\Facades\Route;
+
+return Application::configure(basePath: dirname(__DIR__))
+    ->withRouting(
+        health: '/up',
+        then: function () {
+            // 在这里定义您的RPC路由
+            // 例如: Route::rpc('/api', [YourProcedure::class]);
+        }
+    )
+    ->withMiddleware(function (Middleware $middleware) {
+        // 在这里定义中间件
+    })
+    ->withExceptions(function (Exceptions $exceptions) {
+        // 在这里定义异常处理
+    })->create();

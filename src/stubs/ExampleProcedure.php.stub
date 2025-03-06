@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Http\Procedures;
+
+use Sajya\Server\Procedure;
+
+class ExampleProcedure extends Procedure
+{
+    /**
+     * 方法名称
+     *
+     * @var string
+     */
+    public static string $name = 'example';
+
+    /**
+     * 示例方法 - 返回问候消息
+     *
+     * @param string $name
+     * @return string
+     */
+    public function hello(string $name): string
+    {
+        return "你好，{$name}！";
+    }
+
+    /**
+     * 示例方法 - 计算两个数字的和
+     *
+     * @param int $a
+     * @param int $b
+     * @return int
+     */
+    public function sum(int $a, int $b): int
+    {
+        return $a + $b;
+    }
+
+    /**
+     * 示例方法 - 返回当前时间
+     *
+     * @return string
+     */
+    public function now(): string
+    {
+        return now()->toDateTimeString();
+    }
+}
