@@ -1,7 +1,7 @@
 {
     "name": "ivampiresp/laravel-rpc-server",
     "type": "package",
-    "version": "dev-main",
+    "version": "v0.0.1",
     "license": "MIT",
     "autoload": {
         "psr-4": {
